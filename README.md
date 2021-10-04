@@ -1,1 +1,1 @@
-# pinterest-nodejs-clone
+# Pinterest-Nodejs

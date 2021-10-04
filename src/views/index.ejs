@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+   <%- include("partials/head.ejs") %>
+</head>
+<body>
+
+	<div class="container p-4">
+		 <h1>Imagenes Pinterest</h1>
+		<div class="row">
+				<div class="card-columns">
+					<% images.forEach(function(image){ %>
+							<div class="card animated fadeInDown" >
+								<img src="<%= image.path %>"	class="card-img-top" alt="">
+									<div class="card-body">
+										<h5 class="card-title"><%= image.title	%></h5>
+										<p class="card-text"><%= image.description	%></p>
+										<p class="card-text"><%= format(image.created_at) %></p>
+										<a href="/image/<%= image._id %>">
+									Vista Previa
+									</a>
+									</div>
+							</div>
+						<% }) %>
+				
+				</div>
+		</div>
+	</div>
+	  <div class="container">
+
+<button class="btn ">
+	<a href="/upload">Add +</a>
+</button>
+		</div>
+</body>
+</html>

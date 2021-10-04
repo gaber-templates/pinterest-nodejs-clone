@@ -1,0 +1,1 @@
+//configuracion para las imagenes
